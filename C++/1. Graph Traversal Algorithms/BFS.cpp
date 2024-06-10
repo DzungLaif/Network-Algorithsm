@@ -3,8 +3,7 @@
 #include <queue>  
 using namespace std;  
 
-vector<int> bfs(const vector<vector<int>>& adj_list, int start, int target = -1)  
-{  
+vector<int> bfs(const vector<vector<int>>& adj_list, int start, int target = -1) {  
     int n = adj_list.size();  
     vector<bool> visited(n, false);  
     vector<int> order;  
@@ -30,9 +29,9 @@ vector<int> bfs(const vector<vector<int>>& adj_list, int start, int target = -1)
         return {};  
     }  
     return order;  
-}  
-int main()  
-{  
+} 
+
+int main() {  
     vector<vector<int>> adj_list = {  
         {1, 3},  
         {0, 2, 3},  
@@ -47,6 +46,5 @@ int main()
         cout << i << " ";  
     }  
     cout << endl;  
-  
     return 0;  
 }  
